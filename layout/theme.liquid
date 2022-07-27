@@ -5,12 +5,70 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="description" content="{{ page_description | escape }}">
   <link rel="canonical" href="{{ canonical_url }}">
+  <link rel='stylesheet' id='rnr-google-fonts-css' href="https://fonts.googleapis.com/css?family=Oswald%3A400%2C300%2C700&#038;subset=latin%2Clatin-ext&#038;ver=5.8.4" type='text/css' media='all' />
+
+  <script src="https://kit.fontawesome.com/817c32e32b.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   {{ content_for_header }} <!-- Header hook for plugins -->
   {{ 'application.scss.css' | asset_url | stylesheet_tag }}
   {{ 'application.js' | asset_url | script_tag }}
 </head>
 <body>
+
+  <!-- Top part -->
+
+  <div class = 'fa_bar'>
+
+      <div id = 'phone_call'>
+        <i class="fa-solid fa-phone"></i> 0723 539 557
+      </div>
+
+      <div id = 'account_area'>
+          
+          <a href = '#'> <i class="fa-solid fa-arrow-right-to-bracket"></i> Log in </a>
+            <span class = 'column_braker'></span>
+          <a href = '#'> <i class="fa-solid fa-user-plus"></i> Register </a>
+
+      </div>
+  </div>
+
+  <div class = 'search_area'>
+
+    <div id = 'logo'>
+      <img src =  {{  'logo.jpg' | asset_url}}> <span>Volt<br> Electro <br>Lab</span>
+    </div>
+
+    <div id = 'search'>
+      <input type = 'text' id = 'search_input' placeholder="Cauta produs"/>
+      
+      <div class = 'loading_dots'>
+        <span class = 'dot'/>
+      </div>
+
+      <i class="fa-brands fa-searchengin"></i>
+
+    </div>
+
+    <div id = 'extra'>
+
+      <div class = 'extra_card'>
+        <i class="fa-solid fa-address-card"></i>
+        <span>Contact us</span>
+      </div>
+
+      <div class = 'extra_card'>
+        <i class="fa-solid fa-cart-flatbed"></i>
+        <span>Cart</span>
+      </div>
+
+    </div>
+
+  </div>
+  <div class = 'line-break'>
+
+  </div>
 
   {% for link in linklists.main-menu.links %}
     {% assign child_list_handle = link.title | handleize %}
@@ -20,11 +78,12 @@
         <a href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
       {% endfor %}]
     {% else %}
-      <a href="{{ link.url }}">{{ link.title }}</a>
+      <a href="{{ link.url }}">{{ link.title }}</a> d
     {% endif %}
   {% endfor %}
 
-  <a href="/cart">cart</a>
+<!-- End top part -->
+  <a href="/cart">carting</a>
 
   {% if shop.customer_accounts_enabled %}
     {% if customer %}
@@ -36,8 +95,9 @@
     {% endif %}
   {% endif %}
 
-  <main role="main">
+  <main role="main"> 
     {{ content_for_layout }}
+    {{ template.name }}
   </main>
 </body>
 </html>

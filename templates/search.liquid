@@ -1,11 +1,13 @@
 {% paginate search.results by 10 %}
   <form action="/search" method="get" role="search">
     <input type="search" name="q" value="{{ search.terms | escape }}">
+    <input type="hidden" name="type" value="product" />
     <button type="submit">search</button>
   </form>
 
   {% if search.performed %}
     {% for item in search.results %}
+    {{ item }}
       {% if item.featured_image %}
         <a href="{{ item.url | within: collection }}" title="{{ item.title | escape }}">
           {{ item.featured_image.src | img_url: 'medium' | img_tag: item.featured_image.alt }}
