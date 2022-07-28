@@ -27,7 +27,7 @@
 
       <div id = 'account_area'>
           
-          <a href = '#'> <i class="fa-solid fa-arrow-right-to-bracket"></i> Log in </a>
+          <a href = '/account/login'> <i class="fa-solid fa-arrow-right-to-bracket"></i> Log in </a>
             <span class = 'column_braker'></span>
           <a href = '#'> <i class="fa-solid fa-user-plus"></i> Register </a>
 
@@ -61,7 +61,7 @@
 
     <div id = 'extra'>
 
-      <div class = 'extra_card'>
+      <div class = 'extra_card' onclick="cta()">
         <i class="fa-solid fa-address-card"></i>
         <span>Contact us</span>
       </div>
@@ -78,6 +78,70 @@
 
   </div>
 
+
+  <!-- Contact us slide -->
+
+  <div class = 'contact_us_menu closed'>
+    <div class = 'contact_us_menu_header'>
+        <span>Contacteaza-ne</span>
+        <i class="fa-solid fa-xmark" onclick="cta()"></i> 
+    </div>
+    <div class = 'contact_us_menu_body'>
+
+        <a href = 'tel:0771-189-311'>
+            <div class = 'contact_us_card'>
+                <i class="fa-solid fa-phone"></i>
+                <span>0771 189 311</span>
+            </div>
+         </a>
+
+         <a href = 'https://compose.mail.yahoo.com/?to=office@voltelectrolab.com' target="_blank">
+            <div class = 'contact_us_card special'>
+                <i class="fa-regular fa-envelope"></i>
+                <span style="font-size: 22px;">office@voltelectrolab.com</span>
+            </div>
+         </a>
+
+         <a href = '#'>
+            <div class = 'contact_us_card'>
+                <i class="fa-regular fa-message"></i>
+                <span>Trimite-ne un mesaj</span>
+            </div>
+         </a>
+
+    </div>
+
+    <div class = 'contact_us_menu_footer'>
+
+        <div class = 'company_card'>
+            <div class = 'company_card_header'>
+                <img src = {{ "logo.jpg" | asset_img_url }}/>
+                <div class = 'company_card_title'>
+                    <p>Volt Electro Lab </p>
+                    <p>Service electronică industrială</p>
+                </div>
+            </div>
+
+            <div class = 'company_card_body'>
+               Bucuresti, Splaiul Unirii 313<br> ICPE Etaj 2, Camera 41
+                <i class="fa-solid fa-map-location" style="margin-top: 10px;margin-left: 10px; font-size: 25px"></i>
+            </div>
+        </div>
+
+
+        <div class = 'schedule'>
+            <p>Program de lucru</p>
+            <p>Lu - Vi: 10:00 - 18:00</p>
+            <p>Sa - Du: Inchis</p>
+        </div>
+
+    </div>
+
+</div>
+
+  <!-- End COntact us slide -->
+  
+  
   {% for link in linklists.main-menu.links %}
     {% assign child_list_handle = link.title | handleize %}
     {% if linklists[child_list_handle].links != blank %}

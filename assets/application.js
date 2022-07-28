@@ -128,3 +128,31 @@ function search_items_count()
 {
     return document.querySelectorAll(".search_list a").length;
 }
+
+
+function cta()
+{
+    let menu = document.querySelector(".contact_us_menu");
+    let body = document.querySelector("body");
+    if (menu && body)
+    {
+        if (menu.classList.contains("opened"))
+        {
+            //close
+            menu.classList.remove("opened");
+            menu.classList.add("closed"); 
+
+            //add ugly background 
+            if (body.classList.contains("opened_menu"))
+                body.classList.remove('opened_menu');
+        }
+        else 
+        {
+            //open 
+            menu.classList.remove("closed");
+            menu.classList.add("opened"); 
+            if (!body.classList.contains("opened_menu"))
+            body.classList.add('opened_menu');
+        }
+    }
+}

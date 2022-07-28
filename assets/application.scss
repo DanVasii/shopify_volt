@@ -174,3 +174,147 @@ a.disabled{
     margin-right: 10px;
 }
 
+
+.contact_us_menu
+{
+    position: fixed;
+    top: 0px;
+    width: 80%;
+    max-width: 400px;
+    background-color: #F7F7F7;
+    height: 100%;
+    z-index: 9999;
+    padding: 10px 20px;
+    border-left: 3px solid orange;
+    transition: right .4s;
+}
+
+
+.contact_us_menu.opened{
+    right: 0px;;
+}
+
+.contact_us_menu.closed{
+    right: -450px;
+}
+
+.contact_us_menu_header{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: 1fr;
+    ;
+}
+
+.contact_us_menu_header i{
+    font-size: 40px;
+    cursor: pointer;
+    transition: color .2s;
+}
+
+.contact_us_menu_header i:hover{
+    color: orange;
+}
+
+.contact_us_menu_header span{
+    font-size: 30px;
+}
+
+
+.contact_us_menu_body
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+}
+
+.contact_us_menu_body a{
+    text-decoration: none;
+    color: black;
+}
+
+.contact_us_menu_body i{
+    color: orange;
+}
+
+.contact_us_card
+{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+    font-size: 26px;
+    border: 2px solid orange;
+    padding: 10px 10px;
+    border-radius: 5px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.company_card{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    grid-template-rows: auto auto;
+    padding-bottom: 20px;
+    position: relative;
+    background-color: #FDC62B;
+    padding: 10px 0px;
+    border-radius: 10px;
+}
+
+.company_card_header{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 30px;
+}
+.company_card_header img{
+    width: 70px;
+}
+
+.company_card_title
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+}
+
+.company_card_title p{
+    margin: 0px;
+}
+
+.company_card_title p:first-child{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.company_card_body{
+    width: 90%;
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+.company_card_body i{
+    cursor: pointer;
+    transition: color .2s;
+}
+
+.company_card_body i:hover{
+    color: #4169E1;
+}
+
+.schedule{
+    text-align: center;
+}
+
+.schedule p:first-child{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.schedule p:not(:first-child)
+{
+    margin: 0px;
+    padding-bottom: 10px;
+}
