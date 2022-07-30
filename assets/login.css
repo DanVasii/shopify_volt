@@ -1,0 +1,193 @@
+#login
+{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0px;
+}
+
+.login_card{
+    display: flex;
+    width: 800px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.login_child
+{
+    height: 400px;
+    width: 50%;
+    position: relative;
+    transition: all .3s ease-in;
+}
+
+.right_side
+{
+    background-image: linear-gradient(45deg,#FCC22D 10%, #EF7936);
+    padding: 40px;;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    right: 0px;
+    z-index: 9999;
+}
+
+.right_side.register_on{
+    right: 50%;
+}
+
+.right_side *
+{
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    margin: 10px 0px;
+}
+
+.right_side .sign_up
+{
+    border: 2px solid white;
+    outline: none;
+    background-color: rgba(255,255,255,0);
+    padding: 10px 30px;
+    border-radius: 30px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: 'Merriweather',sans-serif;
+    font-weight: 600;
+    transition: background-color .2s;
+}
+
+.right_side .sign_up:hover{
+    background-color: rgba(255,255,255,.4);
+
+}
+
+.left_side
+{
+    background-color: white;
+    padding: 40px;
+    left: 0px;
+}
+
+.left_side.register_on{
+    left: 50%;
+}
+
+.user_icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    padding: 20px;
+    border-radius: 50%;
+    border: 2px solid #FCC22D;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    color: orange;
+}
+
+
+.login_form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.login_form a 
+{
+    font-size: 14px;
+    text-decoration: none;
+    color: gray;
+    margin-top: 10px;
+}
+
+.login_form input{
+    background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 85%;
+    outline: none;
+}
+
+.login_form .login_button
+{
+    padding: 10px 30px;
+    border: none;
+    margin-top: 30px;
+    outline: none;
+    border-radius: 30px;
+    font-size: 18px;
+    background-image: linear-gradient(to right,#FCC22D 10%, #EF7936);
+    color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;;
+    transition: all .4s;
+}
+
+ .login_button:hover{
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 0px 4px, rgba(0, 0, 0, 0.09) 0px 0px 8px, rgba(0, 0, 0, 0.09) 0px 0px 16px;
+}
+
+.face 
+{
+    width: calc(100% - 80px);
+    height: 400px;
+    background-color: white;
+    position: absolute;
+    opacity: 1;
+    transition: opacity .3s;
+}
+.face_two .login_form{
+    margin-top: 40px;
+}
+
+.left_side.register_on .face_one{
+    opacity: 0;
+}
+
+.left_side .face_two button{
+    box-shadow: none;
+}
+
+.left_side.register_on .face_two .login_button{
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;;
+}
+
+.left_side.register_on .face_two .login_button:hover{
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 0px 4px, rgba(0, 0, 0, 0.09) 0px 0px 8px, rgba(0, 0, 0, 0.09) 0px 0px 16px;
+}
+
+
+.face_one{
+    z-index: 99;
+}
+
+.face_welcome
+{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    transition: all .3s;
+}
+.face_welcome.face_one{
+    opacity: 1;
+}
+
+.face_welcome.face_two{
+    opacity: 1;
+}
+
+.face_welcome.invis{
+    opacity: 0;
+    z-index: -1;
+}

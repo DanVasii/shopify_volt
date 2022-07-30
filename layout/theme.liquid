@@ -5,15 +5,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="description" content="{{ page_description | escape }}">
   <link rel="canonical" href="{{ canonical_url }}">
-  <link rel='stylesheet' id='rnr-google-fonts-css' href="https://fonts.googleapis.com/css?family=Oswald%3A400%2C300%2C700&#038;subset=latin%2Clatin-ext&#038;ver=5.8.4" type='text/css' media='all' />
+  <link rel='stylesheet' id='rnr-google-fonts-css' href="https://fonts.googleapis.com/css?family=Merriweather%3A400%2C500%2C300%2C700&#038;subset=latin%2Clatin-ext&#038;ver=5.8.4" type='text/css' media='all' />
 
   <script src="https://kit.fontawesome.com/817c32e32b.js" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  {% if template == "index" %}
+    {{ 'index.css' | | asset_url | | stylesheet_tag }}
+  {% endif %}
+
+  {% if template == "customers/login" %}
+    {{ 'login.css' | | asset_url | stylesheet_tag }}
+    {{ 'login.js' | asset_url | script_tag }}
+  {% endif %}
 
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
   {{ content_for_header }} <!-- Header hook for plugins -->
   {{ 'application.scss.css' | asset_url | stylesheet_tag }}
   {{ 'application.js' | asset_url | script_tag }}
+
 </head>
 <body>
 
@@ -74,7 +84,7 @@
     </div>
 
   </div>
-  <div class = 'line-break'>
+  <div class = 'line-break' style="background-image: url({{ 'border-top.jpg' | asset_url }}) ">
 
   </div>
 
@@ -141,35 +151,20 @@
 
   <!-- End COntact us slide -->
   
-  
-  {% for link in linklists.main-menu.links %}
-    {% assign child_list_handle = link.title | handleize %}
-    {% if linklists[child_list_handle].links != blank %}
-      <a href="{{ link.url }}">{{ link.title }}</a>
-      [{% for childlink in linklists[child_list_handle].links %}
-        <a href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
-      {% endfor %}]
-    {% else %}
-      <a href="{{ link.url }}">{{ link.title }}</a> d
-    {% endif %}
-  {% endfor %}
+  <div class = 'menu_wrapper'>
+    {% for link in linklists.main-menu.links %}
+      <div class = 'menu_link'>    
+        {{ link.title | link_to: link.url }}
+      </div>
+    {% endfor %}
+</div>
 
 <!-- End top part -->
-  <a href="/cart">carting</a>
 
-  {% if shop.customer_accounts_enabled %}
-    {% if customer %}
-      <a href="/account">account</a>
-      {{ 'log out'  | customer_logout_link }}
-    {% else %}
-      {{ 'log in ' | customer_login_link }}
-      {{ 'register' | customer_register_link }}
-    {% endif %}
-  {% endif %}
 
   <main role="main"> 
+    <!-- {{ template }} -->
     {{ content_for_layout }}
-    {{ template.name }}
   </main>
 </body>
 </html>

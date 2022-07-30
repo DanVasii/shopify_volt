@@ -1,1 +1,76 @@
 <!-- /templates/customers/login.liquid -->
+<section id = 'login'>
+
+<div class = 'login_card'>
+    <div class = 'login_child left_side'>
+        <div class = 'face face_one'>
+            <h2 style="text-align: center;">Autentificare</h2>
+
+            <div class = 'user_icon'>
+                <i class="fa-solid fa-user-gear"></i>
+            </div>
+
+            <div class="login_form">
+                <input type = 'text' id = 'username' placeholder="Username"/>
+                <input type = 'password' id = 'pass' placeholder="Parola"/>
+
+                <a href = '#'>Ai uitat parola?</a>
+
+                <button class = 'login_button'>Autentificare <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+            </div>
+        </div>
+
+        <div class = 'face face_two'>
+            <h2 style="text-align: center;">Inregistrare</h2>
+            <div class="login_form">
+
+                <input type = 'text' id = 'register_username' placeholder="Username"/>
+                <input type = 'text' id = 'register_mail' placeholder="Email"/>
+                <input type = 'text' id = 'register_phone' placeholder="Telefon"/>
+                <input type = 'password' id = 'register_pass' placeholder="Parola"/>
+
+                <button class = 'login_button'>Inregistrare <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class = 'login_child right_side' style="background-color: transparent;">
+
+        <div class = 'face_welcome face_one'>
+            <h1>Salutare!</h1>
+            <p class = 'info'>Nu ai un cont? Inregistreaza-te</p>
+            <button class = 'sign_up' onclick="swap_register()">Inregistrare</button>
+        </div>
+
+        <div class="face_welcome face_two invis">
+            <h1>Bine ai venit!</h1>
+            <p class = 'info'>Ai deja un cont?</p>
+            <button class = 'sign_up' onclick="swap_login()">Autentificare</button>
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+
+{% form 'customer_login' %}
+  {{ form.errors | default_errors }}
+
+  <div class="email">
+    <label for="email">Email</label>
+    <input type="email" name="customer[email]">
+  </div>
+
+  <div class="password">
+    <label for="password">Password</label>
+    <input type="password" name="customer[password]">
+  </div>
+
+  <div class="submit">
+    <input type="submit" value="Sign in">
+  </div>
+{% endform %}
