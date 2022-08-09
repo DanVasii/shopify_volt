@@ -1,0 +1,9 @@
+{
+    "general": {
+      "404": {
+        "title": "Nu am gasit",
+        "subtext_html": "Pagina pe care o cautai nu exista"
+      }
+    }
+  }
+  

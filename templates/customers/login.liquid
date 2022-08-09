@@ -10,14 +10,17 @@
                 <i class="fa-solid fa-user-gear"></i>
             </div>
 
+            {% form 'customer_login' %}
             <div class="login_form">
-                <input type = 'text' id = 'username' placeholder="Username"/>
-                <input type = 'password' id = 'pass' placeholder="Parola"/>
-
+                <input type = 'text' id = 'username' placeholder="Username" name = 'customer[email]'/>
+                <input type = 'password' id = 'pass' placeholder="Parola" name = 'customer[password]'/>
+                {{ form.errors | default_errors}}
                 <a href = '#'>Ai uitat parola?</a>
 
-                <button class = 'login_button'>Autentificare <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
+                <button class = 'login_button' type = 'submit'>Autentificare <i class="fa-solid fa-arrow-right-to-bracket"></i></button>
             </div>
+            {% endform %}
+
         </div>
 
         <div class = 'face face_two'>
@@ -54,23 +57,3 @@
 </div>
 
 </section>
-
-
-
-{% form 'customer_login' %}
-  {{ form.errors | default_errors }}
-
-  <div class="email">
-    <label for="email">Email</label>
-    <input type="email" name="customer[email]">
-  </div>
-
-  <div class="password">
-    <label for="password">Password</label>
-    <input type="password" name="customer[password]">
-  </div>
-
-  <div class="submit">
-    <input type="submit" value="Sign in">
-  </div>
-{% endform %}

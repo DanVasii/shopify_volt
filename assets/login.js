@@ -3,6 +3,9 @@ function swap_register()
 {
     document.querySelector(".left_side").classList.add("register_on");
     document.querySelector(".right_side").classList.add("register_on");
+
+    window.history.pushState('Register', 'Register', '/account/register');
+
     swap_welcome_login();
 
     set_zindex(0);
@@ -12,6 +15,9 @@ function swap_login()
 {
     document.querySelector(".left_side").classList.remove("register_on");
     document.querySelector(".right_side").classList.remove("register_on");
+    
+    window.history.pushState('Login', 'Login', '/account/login');
+    
     swap_welcome_register();
 
     set_zindex(99);

@@ -191,3 +191,12 @@
     opacity: 0;
     z-index: -1;
 }
+
+.errors ul{
+    list-style-type: none;
+    color: red;
+    font-size: 14px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    padding-inline-start: 0px;
+}
