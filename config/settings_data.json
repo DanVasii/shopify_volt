@@ -1,6 +1,19 @@
 {
-  "current": "Default",
+  "current": {
+    "sections": {
+      "home-top-banner": {
+        "type": "home-top-banner",
+        "settings": {
+          "heading1": "HEi"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  },
   "presets": {
-    "Default": { }
+    "Default": {
+    }
   }
 }
