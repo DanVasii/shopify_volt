@@ -10,30 +10,5 @@
     </a>
   </div>
 {% endfor %} -->
-<section id = 'top_banner'>
 
-  <div class = 'wrapper'>
-
-    <div class = 'middle_part'>
-      <p class = 'heading'>Reparam cu precizie</p>
-      <p class = 'heading'>Electronica Industriala</p>
-      <p class = 'heading_2'>Ca nou. Mai ieftin. Cu pasiune</p>
-      <button class="cta_1"><i class="fa-solid fa-calculator"></i> Obtine o cotatie <i class="fa-solid fa-angle-right"></i></button>
-    </div>
-    
-    <div class = 'image_wrapper'>
-      <img src = {{ 'Fabrici-stanga.jpg' | asset_img_url:'grande' }}  />
-      <img src = {{ 'Fabrici-Dreapta.jpg' | asset_img_url: 'grande'}} />
-    </div>
-   
-    <div class = 'fake_wrapper'>
-      <img src = {{ 'Fabrici-brand.jpg' | asset_img_url: '700x30' }} />
-    </div>
-  
-  </div>
-
-</section>
-
-<section id = 'belt'>
-  <img src = {{ 'Electronica_1944x.png' | asset_img_url: 'master' }}  style="width: 100%"/>
-</section>
+{% section 'home-top-banner' %}
