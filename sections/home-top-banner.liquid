@@ -1,4 +1,54 @@
-<h4> {{ section.settings.heading1 }} </h4>
+
+
+
+<div class = 'wrapper'>
+    <div class = 'left_part'>
+
+        <div class = 'panel'>
+            <p class = 'heading1'>Ca nou. Mai ieftin. Cu pasiune</p>
+            <span class = 'splitter'></span>
+
+                <p class = 'sub_heading'>Alt text ceva mai lung cred ca are vreo 50 de caractere dar acum nu am text </p>
+            
+                <div class = 'input_wrapper'>
+                    <input type = 'text' placeholder="Part number search"/>
+
+                    <div class = 'search_icon'>
+                        <i class="fa-brands fa-searchengin"></i>
+                    </div>
+
+                </div>
+
+                <div class = 'tray'>
+                    
+                    <div class = 'item'>
+                        <i class="fa-solid fa-circle-check"></i>
+                         <span>Transport gratuit in Romania</span>
+                    </div>
+
+                    <div class = 'item'>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>Garantie de la 6 luni</span>
+                    </div>
+
+                    <div class = 'item'>
+                        <i class="fa-solid fa-circle-check"></i>
+                        <span>No fix no fee</span>
+                    </div>
+
+                </div>
+
+        </div>
+
+    </div>
+        <div class = 'right_part'>
+            <img src =  {{ 'Artboard 2 copy-8.png' | asset_img_url: '700x' }} />
+        </div>
+</div>
+
+
+
+
 {% schema %}
 
 {
