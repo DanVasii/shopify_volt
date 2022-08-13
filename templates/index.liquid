@@ -15,3 +15,21 @@
 <div class = 'logos_band'>
   <img src = {{ 'Fabrici-brand.jpg' | asset_img_url: 'original' }}/>
 </div>
+
+{% section 'home-cards' %}
+
+<section class = 'blogs'>
+
+{% for article in blogs.repairs.articles %}
+  <div class = 'blog'>
+    <div class = 'image_wrapper'>
+        <img src = {{ article.image | img_url: '300x300'}} />
+  </div>
+    <div class = 'blog_content'>
+      <p>{{ article.title }} </p>
+      <span> {{ article.excerpt | | truncate: 150, '...' }} </span>
+    </div>
+  </div>
+{% endfor %}
+
+</section>
