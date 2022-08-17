@@ -35,6 +35,10 @@
         <i class="fa-solid fa-phone"></i> 0723 539 557
       </div>
 
+      <div id = 'middle_msg'>
+        <i class="fa-solid fa-circle-info"></i> Transport gratuit in Romania
+      </div>
+
       <div id = 'account_area'>
           
           <a href = '/account/login'> <i class="fa-solid fa-arrow-right-to-bracket"></i> Log in </a>
@@ -84,9 +88,7 @@
     </div>
 
   </div>
-  <div class = 'line-break' style="background-image: url({{ 'border-top.jpg' | asset_url }}) ">
-
-  </div>
+  <div class = 'line-break' style="background-image: url({{ 'border-top.jpg' | asset_url }}) "/>
 
 
   <!-- Contact us slide -->
@@ -165,8 +167,49 @@
   <main role="main"> 
     <!-- {{ template }} -->
     {{ content_for_layout }}
-
-  
   </main>
+  <div class = 'line-break' style="background-image: url({{ 'border-top.jpg' | asset_url }}) "/>
+
+  <div class = 'footer'>
+
+    <div class = 'footer_items'>
+
+      <div class = 'footer_item'>
+          <p class = 'footer_title'>Locatiile noastre</p>
+          <ul class = 'footer_content'>
+            <li>Bucuresti, Splaiul Unirii 313</li>
+            <li>Cladirea ICPE, Corp central</li>
+            <li>Etaj 2, Camera 41</li>
+          </ul>
+      </div>
+
+      <div class = 'footer_item'>
+        <p class = 'footer_title'>Link-uri utile</p>
+        <ul class = 'footer_content'>
+          <li><a href = '/index'>Acasa</a></li>
+          <li><a href = '/despre_noi'>Despre noi</a></li>
+          <li><a href = '/despre_noi'>Service automatizari</a></li>
+          <li><a href = '/despre_noi'>Reparatii si service</a></li>
+        </ul>
+    </div>
+
+    <div class = 'footer_item'>
+      <p class = 'footer_title'>Contact</p>
+      <ul class = 'footer_content'>
+        <li><a href = '/index'>Contacteaza-ne</a></li>
+        <li><a href = 'tel: 0771189311'>0771 189 311</a></li>
+        <li><a href = 'https://compose.mail.yahoo.com/?to=office@voltelectrolab.com'>office@voltelectrolab.com</a></li>
+
+      </ul>
+  </div>
+</div>
+  <div class = 'legal_content'>
+    © 2022 Toate drepturile rezervate<br>
+    <span style="font-weight: bold;">Acest site web nu este sancționat sau aprobat de niciun producător sau nume comercial înregistrat. Volt Electro Lab SRL nu este un distribuitor sau reprezentant autorizat pentru producătorii enumerați. Mărcile comerciale, denumirile și mărcile care apar aici sunt proprietatea proprietarilor respectivi.
+    </span>
+  </div>
+
+  </div>
+
 </body>
 </html>

@@ -33,6 +33,22 @@ a.disabled{
 .fa_bar #phone_call i{
         color: orange;
 }
+
+.fa_bar #middle_msg
+{
+    color: #F18537;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fa_bar #middle_msg i{
+    font-size: 24px;
+    margin-right: 15px;
+    color: #F18537;
+}
+
 .fa_bar #account_area
 {
     display: flex;
@@ -128,6 +144,7 @@ a.disabled{
 .line-break{
     width: 100%;
     height: 5px;
+    display: inline-block;
 }
 
 
@@ -330,7 +347,7 @@ a.disabled{
 {
     display: flex;
     flex-direction: row;
-    padding: 10px 20px;
+    padding: 20px 20px;
     border-bottom: 2px solid orange;
 }
 
@@ -344,8 +361,6 @@ a.disabled{
     position: relative;
 }
 
-.menu_wrapper .menu_link:hover{
-}
 
 .menu_wrapper .menu_link::after{
     content: '';
@@ -360,4 +375,54 @@ a.disabled{
 
 .menu_link:hover:after{
     width: 100%;
+}
+
+.footer
+{
+    background-color: #DBDBDB;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    padding: 20px 0px;
+    color: #4A4A4A;
+}
+
+.footer .footer_items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer .legal_content
+{
+    max-width: 1300px;
+    text-align: center;
+    margin: 20px auto;
+}
+.footer_item a{
+    text-decoration: none;
+    color: #4A4A4A;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer_item a:hover{
+    color: #F18537;
+}
+
+.footer_item .footer_title
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer_item .footer_content
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer_item .footer_content li{
+    margin: 5px 0px;
 }
