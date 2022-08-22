@@ -5,7 +5,7 @@
 {{ section.settings.text_content }}
 </p>
 
-<img src = {{ section.settings.image | asset_url }}>
+{{ section.settings.image | img_url: '480' | img_tag }}
 {% schema %}
 
 {
