@@ -2,25 +2,6 @@
   "sections": {
     "textmedia": {
       "type": "text-media",
-      "blocks": {
-        "ecd25a5e-b349-4e57-a0e4-ba3df55745c6": {
-          "type": "text_t",
-          "settings": {
-            "text_content": "Aici este marele nostru titliu",
-            "title_color": "#d23535"
-          }
-        },
-        "87a67181-c023-4a58-8f4d-429104e6626c": {
-          "type": "text_p",
-          "settings": {
-            "text_content": "Aici este text mic micurt"
-          }
-        }
-      },
-      "block_order": [
-        "ecd25a5e-b349-4e57-a0e4-ba3df55745c6",
-        "87a67181-c023-4a58-8f4d-429104e6626c"
-      ],
       "settings": {
       }
     }
