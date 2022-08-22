@@ -14,5 +14,6 @@
 
 }
 
-.section_text_part{
+.section_text_part p{
+    font-size: 18px;
 }
