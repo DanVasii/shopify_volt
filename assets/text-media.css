@@ -4,7 +4,7 @@
     margin: 20px 0px;
 }
 
-.section_content{
+.lp_content.text_media .section_content{
     width: 1380px;
     display: grid;
     grid-template-columns: 800px 500px;

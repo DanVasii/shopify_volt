@@ -1,6 +1,13 @@
 
 
 {{'text-media.css' | asset_url | stylesheet_tag}}
+<div class = 'fake_wrapper' style = '
+{%  if section.settings.change_background %}
+
+background-color: red;
+
+{% endif %}
+'>
 
 <div class = 'section_content'>
    
@@ -28,6 +35,7 @@
         {{ 'mother.jpg' | asset_img_url: '480x' | img_tag}}
     {% endif %}
 
+</div>
 </div>
 {% schema %}
 
