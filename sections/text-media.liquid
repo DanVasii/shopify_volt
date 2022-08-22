@@ -10,7 +10,7 @@
                 {% when 'text_p' %}
             <p> {{ block.settings.text_content }} </p>
                 {% when 'text_t' %}
-                <h2> {{ block.settings.text_content}} </h2>
+                <h2 style = 'color: {{ block.settings.title_color }}'> {{ block.settings.text_content}} </h2>
             {% endcase %}
         {% endfor %}
     </div>
@@ -59,7 +59,8 @@
                 {
                     "type": "color",
                     "id": "title_color",
-                    "label": "Culoare titlu"
+                    "label": "Culoare titlu",
+                    "default": "#4A4A4A"
                 }
             ]
         }
