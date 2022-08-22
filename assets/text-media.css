@@ -15,6 +15,11 @@
 }
 
 .section_text_part p{
-    font-size: 18px;
-    
+    font-size: 18px;   
+    margin: 20px 0px;
+    padding: 0px;
+}
+
+.section_text_part h2{
+    text-align: center;
 }
