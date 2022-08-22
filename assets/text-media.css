@@ -1,6 +1,18 @@
+.lp_content
+{
+    border-bottom: 3px solid orange;
+    margin: 20px 0px;
+}
+
 .section_content{
     width: 1380px;
-    display: flex;
-    background-color: red;
+    display: grid;
+    grid-template-columns: 800px 500px;
+    grid-template-rows: 1fr;
     margin: auto;
+    padding: 20px 10px;
+
+}
+
+.section_text_part{
 }

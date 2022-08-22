@@ -5,15 +5,21 @@
 <div class = 'section_content'>
 
     <div class = 'section_text_part'>
+        Aici avem text default
         {% for block in section.blocks %}
+            {% case block.type %}
+                {% when 'text_p' %}
             <p> {{ block.settings.text_content }} </p>
+                {% when 'text_t' %}
+                <h2> {{ block.settings.text_content}} </h2>
+            {% endcase %}
         {% endfor %}
     </div>
 
     {% if section.settings.image != blank %}
-        {{ section.settings.image | img_url: '480x' | img_tag }}
+        {{ section.settings.image | img_url: '500x' | img_tag }}
     {% else %}
-        {{ 'mother.jpg' | asset_img_url: '480x' | img_tag}}
+        {{ 'mother.jpg' | asset_img_url: '500x' | img_tag}}
     {% endif %}
 
 </div>
@@ -35,11 +41,22 @@
             "name": "Paragraf",
             "type": "text_p",
             "settings": [
-            {
-                "type": "text",
-                "id": "text_content",
-                "label": "Continut text"
-            }
+                {
+                    "type": "text",
+                    "id": "text_content",
+                    "label": "Continut text"
+                }
+            ]
+        },
+        {
+            "name": "Titlu",
+            "type": "text_t",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "text_content",
+                    "label": "Continut titlu"
+                }
             ]
         }
     ],
