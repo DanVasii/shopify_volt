@@ -1,9 +1,12 @@
 {
-    "name": "Test",
-    "sections": {
-        "textmedia":{
-            "type":"text&media"
-        }
-    },
-    "order": ["textmedia"]
+  "sections": {
+    "textmedia": {
+      "type": "text-media",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "textmedia"
+  ]
 }
