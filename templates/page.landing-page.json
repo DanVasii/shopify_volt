@@ -2,24 +2,6 @@
   "sections": {
     "textmedia": {
       "type": "text-media",
-      "blocks": {
-        "82db4fa7-8e1c-4db9-8359-7c3a66cef58e": {
-          "type": "text_p",
-          "settings": {
-            "text_content": "Aici este text"
-          }
-        },
-        "fd22fb08-a78e-4b95-9a36-ac7ab638bb4f": {
-          "type": "text_p",
-          "settings": {
-            "text_content": ""
-          }
-        }
-      },
-      "block_order": [
-        "82db4fa7-8e1c-4db9-8359-7c3a66cef58e",
-        "fd22fb08-a78e-4b95-9a36-ac7ab638bb4f"
-      ],
       "settings": {
       }
     }

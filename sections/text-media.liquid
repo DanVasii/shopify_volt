@@ -4,9 +4,11 @@
 
 <div class = 'section_content'>
 
-<p>
-    Ceva text aici 
-</p>
+    <div class = 'section_text_part'>
+        {% for block in section.blocks %}
+            <p> {{ block.settings.text_content }} </p>
+        {% endfor %}
+    </div>
 
     {% if section.settings.image != blank %}
         {{ section.settings.image | img_url: '480x' | img_tag }}
