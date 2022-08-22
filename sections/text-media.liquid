@@ -5,7 +5,6 @@
 <div class = 'section_content'>
 
     <div class = 'section_text_part'>
-        Aici avem text default
         {% for block in section.blocks %}
             {% case block.type %}
                 {% when 'text_p' %}
@@ -17,9 +16,9 @@
     </div>
 
     {% if section.settings.image != blank %}
-        {{ section.settings.image | img_url: '500x' | img_tag }}
+        {{ section.settings.image | img_url: '480x' | img_tag }}
     {% else %}
-        {{ 'mother.jpg' | asset_img_url: '500x' | img_tag}}
+        {{ 'mother.jpg' | asset_img_url: '480x' | img_tag}}
     {% endif %}
 
 </div>
