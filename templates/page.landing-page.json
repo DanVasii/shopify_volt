@@ -2,6 +2,24 @@
   "sections": {
     "textmedia": {
       "type": "text-media",
+      "blocks": {
+        "d80a7f7a-89c5-42de-8c4d-2ef8e4a158f5": {
+          "type": "text_p",
+          "settings": {
+            "text_content": "Cev atext aici nu stiu exact ce sa scriu"
+          }
+        },
+        "0e3c72a5-79e9-413f-b3c7-7b6368f4f9f8": {
+          "type": "text_p",
+          "settings": {
+            "text_content": "Mama are mere ia r"
+          }
+        }
+      },
+      "block_order": [
+        "d80a7f7a-89c5-42de-8c4d-2ef8e4a158f5",
+        "0e3c72a5-79e9-413f-b3c7-7b6368f4f9f8"
+      ],
       "settings": {
       }
     }
