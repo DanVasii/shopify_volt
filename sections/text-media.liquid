@@ -1,8 +1,15 @@
 
+
+{{'text-media.css' | asset_url | stylesheet_tag}}
+<p>
+{{ section.settings.text_content }}
+</p>
+
 {% schema %}
 
 {
     "name": "Text and Media",
+    "tag": "section",
     "class": "lp_content text_media",
     "settings":[
         {
@@ -10,17 +17,20 @@
             "id": "text_content",
             "label": "Text content",
             "default": "Mama are mere"
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image content"
         }
     ],
     "presets": [
       {
-        "name": "custom-text",
+        "name": "Text and media",
         "category": "Custom"
       }
     ],
      "templates": [
-    "index",
-    "product",
     "page"
   ]
     

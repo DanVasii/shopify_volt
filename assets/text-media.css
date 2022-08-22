@@ -1,0 +1,6 @@
+.lp_content{
+    width: 1380px;
+    display: flex;
+    background-color: red;
+    margin: auto;
+}
