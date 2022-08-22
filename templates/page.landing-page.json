@@ -2,6 +2,31 @@
   "sections": {
     "textmedia": {
       "type": "text-media",
+      "blocks": {
+        "d80a7f7a-89c5-42de-8c4d-2ef8e4a158f5": {
+          "type": "text_p",
+          "settings": {
+            "text_content": "Cev atext aici nu stiu exact ce sa scriu"
+          }
+        },
+        "0e3c72a5-79e9-413f-b3c7-7b6368f4f9f8": {
+          "type": "text_p",
+          "settings": {
+            "text_content": "Mama are mere"
+          }
+        },
+        "0262f8c3-5247-4994-9aeb-b303672fd8a7": {
+          "type": "text_t",
+          "settings": {
+            "text_content": "Ceva titlu aici"
+          }
+        }
+      },
+      "block_order": [
+        "d80a7f7a-89c5-42de-8c4d-2ef8e4a158f5",
+        "0e3c72a5-79e9-413f-b3c7-7b6368f4f9f8",
+        "0262f8c3-5247-4994-9aeb-b303672fd8a7"
+      ],
       "settings": {
       }
     }
