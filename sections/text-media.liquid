@@ -3,8 +3,14 @@
 {{'text-media.css' | asset_url | stylesheet_tag}}
 
 <div class = 'section_content'>
-
+   
     <div class = 'section_text_part'>
+
+    {% if section.blocks.size ==0 %}
+        <h2> Aici este un titlu si mai mare si mai </h2>
+        <p> Aici este un text lung de minim 150 de caractere la care adaug si eu mai mmaulte cuvinte chiar daa nu stuns scrisa corect nu conteaza ca ne trebuie doar un mienim de carctere </p>
+    {% endif %}
+
         {% for block in section.blocks %}
             {% case block.type %}
                 {% when 'text_p' %}
@@ -13,6 +19,7 @@
                 <h2 style = 'color: {{ block.settings.title_color }}'> {{ block.settings.text_content}} </h2>
             {% endcase %}
         {% endfor %}
+
     </div>
 
     {% if section.settings.image != blank %}
@@ -33,6 +40,12 @@
             "type": "image_picker",
             "id": "image",
             "label": "Image content"
+        },
+        {
+            "type": "checkbox",
+            "id": "change_backround",
+            "label": "Fundal diferit",
+            "default": false
         }
     ],
     "blocks": [
