@@ -1,11 +1,20 @@
 
 
 {{'text-media.css' | asset_url | stylesheet_tag}}
+
+<div class = 'section_content'>
+
 <p>
-{{ section.settings.text_content }}
+    Ceva text aici 
 </p>
 
-{{ section.settings.image | img_url: '480' | img_tag }}
+    {% if section.settings.image != blank %}
+        {{ section.settings.image | img_url: '480x' | img_tag }}
+    {% else %}
+        {{ 'mother.jpg' | asset_img_url: '480x' | img_tag}}
+    {% endif %}
+
+</div>
 {% schema %}
 
 {
@@ -14,15 +23,22 @@
     "class": "lp_content text_media",
     "settings":[
         {
-            "type": "text",
-            "id": "text_content",
-            "label": "Text content",
-            "default": "Mama are mere"
-        },
-        {
             "type": "image_picker",
             "id": "image",
             "label": "Image content"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Paragraf",
+            "type": "text_p",
+            "settings": [
+            {
+                "type": "text",
+                "id": "text_content",
+                "label": "Continut text"
+            }
+            ]
         }
     ],
     "presets": [
