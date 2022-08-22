@@ -1,0 +1,9 @@
+{
+    "name": "Test",
+    "sections": {
+        "textmedia":{
+            "type":"text&media"
+        }
+    },
+    "order": ["textmedia"]
+}

@@ -3,7 +3,6 @@
 
 {
     "name": "Text and Media",
-    "tag": "section",
     "class": "lp_content text_media",
     "settings":[
         {
