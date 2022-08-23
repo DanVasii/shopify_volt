@@ -32,7 +32,11 @@ background-color: #F7F7F7;
     {% if section.settings.image != blank %}
         {{ section.settings.image | img_url: '480x' | img_tag }}
     {% else %}
-        {{ 'mother.jpg' | asset_img_url: '480x' | img_tag}}
+        {% if section.settings.yt_video != empty %}
+             <lite-youtube videoid=' {{ section.settings.yt_video }} ' playlabel="Play: Keynote (Google I/O '18)"></lite-youtube>
+            {% else %}
+                {{ 'mother.jpg' | asset_img_url: "480x" | img_tag }}
+        {% endif %}
     {% endif %}
 
 </div>
@@ -51,7 +55,7 @@ background-color: #F7F7F7;
             "label": "Image content"
         },
         {
-            "type": "url",
+            "type": "text",
             "id": "yt_video",
             "label": "Link youtube"
         },
