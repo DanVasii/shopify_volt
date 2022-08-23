@@ -5,9 +5,9 @@
 }
 
 .lp_content.text_media .section_content{
-    width: 1380px;
+    width: 1140px;
     display: grid;
-    grid-template-columns: 800px 500px;
+    grid-template-columns: 640px 500px;
     grid-template-rows: 1fr;
     margin: auto;
     padding: 20px 10px;

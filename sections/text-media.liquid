@@ -37,6 +37,7 @@ background-color: #F7F7F7;
 
 </div>
 </div>
+
 {% schema %}
 
 {
@@ -50,10 +51,15 @@ background-color: #F7F7F7;
             "label": "Image content"
         },
         {
+            "type": "url",
+            "id": "yt_video",
+            "label": "Link youtube"
+        },
+        {
             "type": "checkbox",
             "id": "change_backround",
             "label": "Fundal diferit",
-            "default": true
+            "default": false
         }
     ],
     "blocks": [
