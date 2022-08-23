@@ -14,6 +14,15 @@
 
 }
 
+.lp_content.media_text .section_content{
+    width: 1140px;
+    display: grid;
+    grid-template-columns: 500px 640px;
+    grid-template-rows: 1fr;
+    margin: auto;
+    padding: 20px 10px;
+}
+
 .section_text_part p{
     font-size: 18px;   
     margin: 20px 0px;

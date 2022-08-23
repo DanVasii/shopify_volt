@@ -1,0 +1,118 @@
+
+
+{{'text-media.css' | asset_url | stylesheet_tag}}
+
+<div class = 'fake_wrapper' style = '
+{%  if section.settings.change_backround == true %}
+
+background-color: #F7F7F7;
+
+{% endif %}
+'>
+
+<div class = 'section_content'>
+   
+    {% if section.settings.image != blank %}
+        {{ section.settings.image | img_url: '480x' | img_tag }}
+    {% else %}
+        {% if section.settings.yt_video != empty %}
+             <lite-youtube videoid='{{ section.settings.yt_video }}' playlabel="Play: Keynote (Google I/O '18)"></lite-youtube>
+            {% else %}
+                {{ 'mother.jpg' | asset_img_url: "480x" | img_tag }}
+        {% endif %}
+    {% endif %}
+
+    <div class = 'section_text_part'>
+
+        {% if section.blocks.size ==0 %}
+            <h2> Aici este un titlu si mai mare si mai </h2>
+            <p> Aici este un text lung de minim 150 de caractere la care adaug si eu mai mmaulte cuvinte chiar daa nu stuns scrisa corect nu conteaza ca ne trebuie doar un mienim de carctere </p>
+        {% endif %}
+    
+            {% for block in section.blocks %}
+                {% case block.type %}
+                    {% when 'text_p' %}
+                <p style = 'color: {{ block.settings.text_color }}'> {{ block.settings.text_content }} </p>
+                    {% when 'text_t' %}
+                    <h2 style = 'color: {{ block.settings.title_color }}'> {{ block.settings.text_content}} </h2>
+                {% endcase %}
+            {% endfor %}
+    
+        </div>
+
+</div>
+</div>
+
+{% schema %}
+
+{
+    "name": "Media and text",
+    "tag": "section",
+    "class": "lp_content media_text",
+    "settings":[
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image content"
+        },
+        {
+            "type": "text",
+            "id": "yt_video",
+            "label": "Link youtube"
+        },
+        {
+            "type": "checkbox",
+            "id": "change_backround",
+            "label": "Fundal diferit",
+            "default": false
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Paragraf",
+            "type": "text_p",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "text_content",
+                    "label": "Continut text"
+                },
+                {
+                    "type": "color",
+                    "id": "text_color",
+                    "label": "Culoare text",
+                    "default": "#4A4A4A"
+                }
+            ]
+        },
+        {
+            "name": "Titlu",
+            "type": "text_t",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "text_content",
+                    "label": "Continut titlu"
+                },
+                {
+                    "type": "color",
+                    "id": "title_color",
+                    "label": "Culoare titlu",
+                    "default": "#4A4A4A"
+                }
+            ]
+        }
+    ],
+    "presets": [
+      {
+        "name": "Media and Text",
+        "category": "Custom"
+      }
+    ],
+     "templates": [
+    "page"
+  ]
+    
+}
+
+{% endschema %}

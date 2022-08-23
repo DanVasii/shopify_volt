@@ -3,12 +3,16 @@
     "textmedia": {
       "type": "text-media",
       "settings": {
-        "yt_video": "nUb0mWJWB1w",
-        "change_backround": false
+      }
+    },
+    "mediatext": {
+      "type": "media-text",
+      "settings": {
       }
     }
   },
   "order": [
-    "textmedia"
+    "textmedia",
+    "mediatext"
   ]
 }
