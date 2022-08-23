@@ -3,6 +3,8 @@
     "textmedia": {
       "type": "text-media",
       "settings": {
+        "yt_video": "nUb0mWJWB1w",
+        "change_backround": false
       }
     }
   },
