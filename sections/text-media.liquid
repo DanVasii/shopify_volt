@@ -33,7 +33,7 @@ background-color: #F7F7F7;
         {{ section.settings.image | img_url: '480x' | img_tag }}
     {% else %}
         {% if section.settings.yt_video != empty %}
-             <lite-youtube videoid=' {{ section.settings.yt_video }} ' playlabel="Play: Keynote (Google I/O '18)"></lite-youtube>
+             <lite-youtube videoid='{{ section.settings.yt_video }}' playlabel="Play: Keynote (Google I/O '18)"></lite-youtube>
             {% else %}
                 {{ 'mother.jpg' | asset_img_url: "480x" | img_tag }}
         {% endif %}
