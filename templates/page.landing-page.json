@@ -9,10 +9,16 @@
       "type": "media-text",
       "settings": {
       }
+    },
+    "cardsarea": {
+      "type": "cards",
+      "settings": {
+      }
     }
   },
   "order": [
     "textmedia",
-    "mediatext"
+    "mediatext",
+    "cardsarea"
   ]
 }

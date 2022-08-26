@@ -1,0 +1,47 @@
+
+<div class = 'section_content'>
+ <div class = 'cards'>  
+    <div class = 'card'>
+      {{ 'mother.jpg' |  asset_img_url: '160x160' | img_tag }}
+      <p> Aici este continutul text al cardului care va fi afisat in pagina aceasta </p>
+    </div>
+
+ </div>
+</div>
+
+<!-- 
+{% schema %}
+    {
+        "name": "cards",
+        "tag": "section",
+        "class": "lp_content",
+        "blocks": [
+          {
+            "name": "Card",
+            "type":"card",
+            "settings":[
+              {
+                "type": "text",
+                "id": "card_text",
+                "label": "Continut text card"
+              },
+              {
+                "type": "image_picker",
+                "id": "card_image",
+                "label": "Imagine card"
+              }
+            ]
+          }
+        ],
+        "presets": [
+        {
+          "name": "Cards Container",
+          "category": "Custom"
+        }
+      ],
+       "templates": [
+      "page"
+    ]
+    }
+
+{% endschema %} -->

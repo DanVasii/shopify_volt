@@ -22,6 +22,8 @@
   {% if template == "page.landing-page" %}
     {{ 'lite-yt-embed.css' | asset_url | stylesheet_tag }}
     {{ 'lite-yt-embed.js' | asset_url | | script_tag }}
+
+    {{'landing-page.css' | asset_url | stylesheet_tag}}
   {% endif %}
 
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">

@@ -3,9 +3,11 @@
     border-bottom: 3px solid orange;
     margin: 20px 0px;
 }
+.lp_content .section_content{
+    width: 1140px;
+}
 
 .lp_content.text_media .section_content{
-    width: 1140px;
     display: grid;
     grid-template-columns: 640px 500px;
     grid-template-rows: 1fr;
@@ -15,7 +17,6 @@
 }
 
 .lp_content.media_text .section_content{
-    width: 1140px;
     display: grid;
     grid-template-columns: 500px 640px;
     grid-template-rows: 1fr;
@@ -31,4 +32,25 @@
 
 .section_text_part h2{
     text-align: center;
+}
+
+.card
+{
+    width: 280px;
+    height: 330px;
+    background-color: orange;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.card img 
+{
+    display: block;
+    margin: auto;
+}
+
+.card p{
+    padding: 0px 20px;
+    text-align: center;
+    font-weight: 600;
 }
