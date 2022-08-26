@@ -1,0 +1,51 @@
+
+<div class = 'section_content'>
+    <div class = 'fake_wrapper' style = "
+     {% if section.settings.background_image != blank %}   background-image: url({{ section.settings.background_image | asset_img_url: '200x' }}) {% endif %}
+    ">
+        tata
+    </div>
+</div>
+
+
+{% schema %}
+{
+    "name": "Modele service",
+    "tag": "section",
+    "class": "lp_content full_screen no_border",
+    "settings":[
+        {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Imagine de fundal"
+        }
+    ],
+    "blocks": [
+        {
+            "name": "Modul",
+            "type": "serviced_module",
+            "settings": [
+                {
+                        "type": "image_picker",
+                        "id": "module_pic",
+                        "label": "Poza modul"
+                },
+                {
+                    "type": "text",
+                    "id": "module_text",
+                    "label": "Text modul"  
+                }
+            ]
+        }
+    ],
+    "presets": [
+    {
+      "name": "modele_service ",
+      "category": "Custom"
+    }
+  ],
+   "templates": [
+  "page"
+]
+}
+{%  endschema %}

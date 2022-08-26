@@ -14,11 +14,17 @@
       "type": "fancy-cards",
       "settings": {
       }
+    },
+    "service_models": {
+      "type": "models",
+      "settings": {
+      }
     }
   },
   "order": [
     "textmedia",
     "mediatext",
-    "cardsarea"
+    "cardsarea",
+    "service_models"
   ]
 }
