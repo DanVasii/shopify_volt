@@ -1,7 +1,11 @@
 
 <div class = 'section_content'>
     <div class = 'fake_wrapper' style = "
-     {% if section.settings.background_image != blank %}   background-image: url({{ section.settings.background_image | asset_img_url: '200x' }}) {% endif %}
+     {% if section.settings.background_image != blank %} 
+       background-image: url({{ section.settings.background_image | asset_img_url: '200x' }}) 
+       {% else %}
+       background-color: red;
+       {% endif %}
     ">
         tata
     </div>
@@ -40,7 +44,7 @@
     ],
     "presets": [
     {
-      "name": "modele_service ",
+      "name": "Modele service",
       "category": "Custom"
     }
   ],

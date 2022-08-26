@@ -3,15 +3,11 @@
     "textmedia": {
       "type": "text-media",
       "settings": {
-        "yt_video": "",
-        "change_backround": false
       }
     },
     "mediatext": {
       "type": "media-text",
       "settings": {
-        "yt_video": "",
-        "change_backround": false
       }
     },
     "cardsarea": {
@@ -21,17 +17,6 @@
     },
     "service_models": {
       "type": "models",
-      "blocks": {
-        "a3574965-5fd8-432f-95da-ccb1bb009466": {
-          "type": "serviced_module",
-          "settings": {
-            "module_text": ""
-          }
-        }
-      },
-      "block_order": [
-        "a3574965-5fd8-432f-95da-ccb1bb009466"
-      ],
       "settings": {
       }
     }
