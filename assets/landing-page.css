@@ -1,17 +1,31 @@
 .lp_content
 {
-    border-bottom: 3px solid orange;
     margin: 20px 0px;
 }
+
+.lp_content:not(.no_border)
+{        
+    border-bottom: 3px solid orange;
+}
+
+.section_content{
+    padding-bottom: 20px !important;
+}
+
 .lp_content .section_content{
     width: 1140px;
+    margin: auto;
+}
+
+.lp_content.full_screen .section_content{
+    width: calc(100% - 40px);
+    padding: 0px 20px;
 }
 
 .lp_content.text_media .section_content{
     display: grid;
     grid-template-columns: 640px 500px;
     grid-template-rows: 1fr;
-    margin: auto;
     padding: 20px 10px;
 
 }
@@ -34,23 +48,42 @@
     text-align: center;
 }
 
+.lp_content .section_content.cards_wrapper 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+
+}
+
 .card
 {
     width: 280px;
     height: 330px;
-    background-color: orange;
+    background-color: #FFA500;
     padding: 10px;
     border-radius: 5px;
+    margin: 0px 20px;
 }
 
-.card img 
+.card i 
 {
     display: block;
     margin: auto;
+    font-size: 80px;
+    text-align: center;
+    color: #3A5BA0;
+}
+
+.card h2{
+    margin-top: 10px;
+    text-align: center;
 }
 
 .card p{
     padding: 0px 20px;
     text-align: center;
     font-weight: 600;
+    color: #4A4A4A;
 }

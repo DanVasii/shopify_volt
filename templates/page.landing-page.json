@@ -11,7 +11,7 @@
       }
     },
     "cardsarea": {
-      "type": "cards",
+      "type": "fancy-cards",
       "settings": {
       }
     }
