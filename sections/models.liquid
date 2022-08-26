@@ -2,7 +2,7 @@
 <div class = 'section_content'>
     <div class = 'fake_wrapper' style = "
      {% if section.settings.background_image != blank %} 
-       background-image: url({{ section.settings.background_image | asset_img_url: '200x' }}) 
+       background-image: url({{ section.settings.background_image | img_url: '200x' }}) 
        {% else %}
        background-color: red;
        {% endif %}
