@@ -124,3 +124,15 @@
 .model_repaired p{
     margin: 20px 0px;
 }
+
+.lp_content.service_brands .section_content{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-around;
+}
+
+.lp_content.service_brands .section_content .logo_card
+{
+    margin: 20px 15px;
+}

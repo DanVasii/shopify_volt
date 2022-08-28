@@ -19,12 +19,18 @@
       "type": "models",
       "settings": {
       }
+    },
+    "service_brands": {
+      "type": "brands",
+      "settings": {
+      }
     }
   },
   "order": [
     "textmedia",
     "mediatext",
     "cardsarea",
-    "service_models"
+    "service_models",
+    "service_brands"
   ]
 }

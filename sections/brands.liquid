@@ -1,11 +1,48 @@
 
+<h2 style="text-align: center; margin-top: 50px">Marci pentru care se ofera serivce aparate de sudura</h2>
+<div class = 'section_content'>
+    <!-- <div class = 'logo_card'>
+     {{ "mother.jpg" | asset_img_url: '250x160' | img_tag }}
+    </div>
+    <div class = 'logo_card'>
+        {{ "mother.jpg" | asset_img_url: '250x160' | img_tag }}
+       </div>
+       <div class = 'logo_card'>
+        {{ "mother.jpg" | asset_img_url: '250x160' | img_tag }}
+       </div>
+       <div class = 'logo_card'>
+        {{ "mother.jpg" | asset_img_url: '250x160' | img_tag }}
+       </div>
+       <div class = 'logo_card'>
+        {{ "mother.jpg" | asset_img_url: '250x160' | img_tag }}
+       </div>
+       <div class = 'logo_card'>
+        {{ "mother.jpg" | asset_img_url: '250x160' | img_tag }}
+       </div>
+       <div class = 'logo_card'>
+        {{ "mother.jpg" | asset_img_url: '250x160' | img_tag }}
+       </div>
+       <div class = 'logo_card'>
+        {{ "mother.jpg" | asset_img_url: '250x160' | img_tag }}
+       </div>
+       <div class = 'logo_card'>
+        {{ "mother.jpg" | asset_img_url: '250x160' | img_tag }}
+       </div> -->
+
+       {% for block in section.blocks %}
+            <div class = 'logo_card'>
+                {{ block.brand_img | img_url: '250x160' | img_tag }}
+            </div>
+       {% endfor %}
+
+</div>
 
 {% schema %}
 
 {
     "name": "Branduri service",
     "tag": "section",
-    "class": "lp_content full_screen no_border",
+    "class": "lp_content service_brands no_border",
     "blocks":[
         {
             "name": "Brand",
