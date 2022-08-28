@@ -36,7 +36,7 @@ margin-bottom: 20px;
                 {% for block in section.blocks %}   
                 <div class = 'model_repaired'>
                     <p class="title"> {{ block.settings.module_text }}</p>
-                    {{ block.settings.module_pic | img_url: '350x350' | img_tag}}
+                    {{ block.settings.module_pic | img_url: '350x310' | img_tag}}
                 </div>
                 {% endfor %}
             {% endif %}
