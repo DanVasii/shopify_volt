@@ -3,11 +3,15 @@
     "textmedia": {
       "type": "text-media",
       "settings": {
+        "yt_video": "",
+        "change_backround": false
       }
     },
     "mediatext": {
       "type": "media-text",
       "settings": {
+        "yt_video": "",
+        "change_backround": false
       }
     },
     "cardsarea": {
@@ -22,6 +26,31 @@
     },
     "service_brands": {
       "type": "brands",
+      "blocks": {
+        "7fb717ea-563e-4f58-9d79-52021b138956": {
+          "type": "brand",
+          "settings": {
+            "brand_img": "shopify:\/\/shop_images\/huawei-logo-Service-aparate-invertoare-solare.webp"
+          }
+        },
+        "7e54083f-5646-4041-88ce-67be75d168f1": {
+          "type": "brand",
+          "settings": {
+            "brand_img": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg"
+          }
+        },
+        "54c1f102-11f8-44ca-8f87-087ecd6fe804": {
+          "type": "brand",
+          "settings": {
+            "brand_img": "shopify:\/\/shop_images\/Fronius_logo-Service-aparate-invertoare-solare.webp"
+          }
+        }
+      },
+      "block_order": [
+        "7fb717ea-563e-4f58-9d79-52021b138956",
+        "7e54083f-5646-4041-88ce-67be75d168f1",
+        "54c1f102-11f8-44ca-8f87-087ecd6fe804"
+      ],
       "settings": {
       }
     }
