@@ -3,15 +3,11 @@
     "textmedia": {
       "type": "text-media",
       "settings": {
-        "yt_video": "",
-        "change_backround": false
       }
     },
     "mediatext": {
       "type": "media-text",
       "settings": {
-        "yt_video": "",
-        "change_backround": false
       }
     },
     "cardsarea": {
@@ -26,32 +22,60 @@
     },
     "service_brands": {
       "type": "brands",
+      "settings": {
+      }
+    },
+    "steps": {
+      "type": "steps",
+      "settings": {
+      }
+    },
+    "backup": {
+      "type": "media-text",
       "blocks": {
-        "7fb717ea-563e-4f58-9d79-52021b138956": {
-          "type": "brand",
+        "block_title": {
+          "type": "text_t",
           "settings": {
-            "brand_img": "shopify:\/\/shop_images\/huawei-logo-Service-aparate-invertoare-solare.webp"
+            "text_content": "Parameter backup"
           }
         },
-        "7e54083f-5646-4041-88ce-67be75d168f1": {
-          "type": "brand",
+        "block_text_content": {
+          "type": "text_p",
           "settings": {
-            "brand_img": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg"
-          }
-        },
-        "54c1f102-11f8-44ca-8f87-087ecd6fe804": {
-          "type": "brand",
-          "settings": {
-            "brand_img": "shopify:\/\/shop_images\/Fronius_logo-Service-aparate-invertoare-solare.webp"
+            "text_content": "testam parameter"
           }
         }
       },
       "block_order": [
-        "7fb717ea-563e-4f58-9d79-52021b138956",
-        "7e54083f-5646-4041-88ce-67be75d168f1",
-        "54c1f102-11f8-44ca-8f87-087ecd6fe804"
+        "block_title",
+        "block_text_content"
       ],
       "settings": {
+        "change_backround": true
+      }
+    },
+    "spares": {
+      "type": "media-text",
+      "blocks": {
+        "block_title": {
+          "type": "text_t",
+          "settings": {
+            "text_content": "SPARE PARTS AND REPLACEMENT UNITS"
+          }
+        },
+        "block_text_content": {
+          "type": "text_p",
+          "settings": {
+            "text_content": "testam parameter"
+          }
+        }
+      },
+      "block_order": [
+        "block_title",
+        "block_text_content"
+      ],
+      "settings": {
+        "change_backround": true
       }
     }
   },
@@ -60,6 +84,9 @@
     "mediatext",
     "cardsarea",
     "service_models",
-    "service_brands"
+    "service_brands",
+    "backup",
+    "steps",
+    "spares"
   ]
 }
